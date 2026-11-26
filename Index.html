@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>یک قدم جلوتر</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #f7f8fa;
+  color: #20242c;
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+}
+header { padding: 55px 15px 25px; }
+h1 { font-size: 32px; }
+p { line-height: 2; color: #666; }
+main {
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 25px;
+}
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 5px 25px #0000000a;
+}
+button {
+  background: #20242c;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 14px 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#challenge { margin: 20px 0; font-size: 19px; }
+footer { padding: 30px; color: #888; }
+</style>
+</head>
+<body>
+<header>
+  <h1>یک قدم جلوتر ✨</h1>
+  <p>هر روز یک چیز جدید یاد بگیر!</p>
+</header>
+<main>
+  <div class="card">
+    <h2>چالش امروز 🧠</h2>
+    <div id="challenge">برای دریافت چالش آماده‌ای؟</div>
+    <button onclick="newChallenge()">چالش جدید</button>
+  </div>
+</main>
+<footer>ساخته شده برای ذهن‌های کنجکاو 🌱</footer>
+<script>
+const challenges = [
+"چرا آسمان آبی است؟",
+"سه کاربرد هوش مصنوعی را نام ببر.",
+"یک حقیقت جالب درباره فضا پیدا کن.",
+"چرا یخ روی آب شناور می‌ماند؟",
+"یک کلمه انگلیسی جدید یاد بگیر.",
+"اگر می‌توانستی یک اختراع کنی، چه می‌ساختی؟"
+];
+function newChallenge() {
+ const i = Math.floor(Math.random() * challenges.length);
+ document.getElementById("challenge").textContent = challenges[i];
+}
+</script>
+</body>
+</html>
